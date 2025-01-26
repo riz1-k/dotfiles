@@ -1,10 +1,12 @@
 return {
   'luckasRanarison/tailwind-tools.nvim',
+  event = 'BufReadPost',
   name = 'tailwind-tools',
   build = ':UpdateRemotePlugins',
   dependencies = {
     'nvim-treesitter/nvim-treesitter',
-    'neovim/nvim-lspconfig',
+    'nvim-telescope/telescope.nvim', -- optional
+    'neovim/nvim-lspconfig', -- optional
   },
   opts = {}, -- your configuration
 }

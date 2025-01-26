@@ -4,6 +4,7 @@ return { -- Autocompletion
   dependencies = { -- Snippet Engine & its associated nvim-cmp source
     {
       'L3MON4D3/LuaSnip',
+      'onsails/lspkind-nvim',
       build = (function()
         if vim.fn.has 'win32' == 1 or vim.fn.executable 'make' == 0 then
           return
@@ -55,6 +56,16 @@ return { -- Autocompletion
         },
         {
           name = 'path',
+        },
+      },
+    }
+  end,
+  opts = function()
+    return {
+      -- ...
+      formatting = {
+        format = require('lspkind').cmp_format {
+          before = require('tailwind-tools.cmp').lspkind_format,
         },
       },
     }
