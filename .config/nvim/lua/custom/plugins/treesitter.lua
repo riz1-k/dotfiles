@@ -15,8 +15,6 @@ return { -- Highlight, edit, and navigate code
     },
     fold = {
       enable = true,
-      -- disable folds for treesitter
-      disable = { 'html' },
     },
   },
 }
