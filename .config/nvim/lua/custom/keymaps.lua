@@ -61,6 +61,11 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', {
   desc = 'Move focus to the upper window',
 })
 
+-- rename keymap, leader + l + r
+vim.keymap.set('n', '<leader>lr', '<cmd>lua vim.lsp.buf.rename()<CR>', {
+  desc = 'Rename symbol under cursor',
+})
+
 -- telescrope buffers
 keymap.set('n', '<S-h>', function()
   require('telescope.builtin').buffers {
