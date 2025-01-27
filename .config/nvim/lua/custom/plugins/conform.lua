@@ -2,33 +2,32 @@ return {
   'stevearc/conform.nvim',
   event = { 'BufReadPre', 'BufNewFile' },
   config = function()
-    local conform = require 'conform'
-
-    conform.setup {
+    require('conform').setup {
       formatters_by_ft = {
-        javascript = { 'prettier' },
-        typescript = { 'prettier' },
-        javascriptreact = { 'eslint_d' },
-        typescriptreact = { 'eslint_d' },
-        css = { 'prettier' },
+        javascript = { 'prettier', 'eslint_d' },
+        typescript = { 'prettier', 'eslint_d' },
+        typescriptreact = { 'prettier', 'eslint_d' },
+        javascriptreact = { 'prettier', 'eslint_d' },
         html = { 'prettier' },
+        css = { 'prettier' },
         json = { 'prettier' },
         markdown = { 'prettier' },
-        lua = { 'stylua' },
+        markdown_inline = { 'prettier' },
       },
       format_on_save = {
         lsp_fallback = true,
         async = false,
-        timeout_ms = 500,
+        timeout_ms = 1000,
+      },
+      lint = {
+        disabled_filetypes = {
+          'NvimTree',
+          'TelescopePrompt',
+          'help',
+          'lspinfo',
+          'startuptime',
+        },
       },
     }
-
-    vim.keymap.set({ 'n', 'v' }, '<leader>mp', function()
-      conform.format {
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 500,
-      }
-    end, { desc = 'Format file or range (in visual mode)' })
   end,
 }
