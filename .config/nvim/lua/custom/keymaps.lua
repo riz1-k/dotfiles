@@ -61,6 +61,20 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', {
   desc = 'Move focus to the upper window',
 })
 
+-- diagnostic keymaps
+keymap.set('n', '[d', function()
+  vim.diagnostic.goto_prev()
+  vim.diagnostic.open_float()
+end, {
+  desc = 'Go to previous diagnostic',
+})
+keymap.set('n', ']d', function()
+  vim.diagnostic.goto_next()
+  vim.diagnostic.open_float()
+end, {
+  desc = 'Go to next diagnostic',
+})
+
 -- rename keymap, leader + l + r
 vim.keymap.set('n', '<leader>lr', '<cmd>lua vim.lsp.buf.rename()<CR>', {
   desc = 'Rename symbol under cursor',
