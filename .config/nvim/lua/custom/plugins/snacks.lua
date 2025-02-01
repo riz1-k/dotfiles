@@ -1,5 +1,5 @@
 return {
-  'folke/snacks.nvim',
+  "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
   opts = {
@@ -7,9 +7,9 @@ return {
     scroll = { enabled = true },
     dashboard = {
       sections = {
-        { section = 'header' },
-        { section = 'keys', gap = 1, padding = 1 },
-        { section = 'startup' },
+        { section = "header" },
+        { section = "keys", gap = 1, padding = 1 },
+        { section = "startup" },
       },
     },
     input = { enabled = true },
@@ -24,127 +24,127 @@ return {
   },
   keys = {
     {
-      '<leader>zm',
+      "<leader>zm",
       function()
         Snacks.zen()
       end,
-      { desc = 'Zen mode' },
+      { desc = "Zen mode" },
     },
     {
-      '<leader>Z',
+      "<leader>Z",
       function()
         Snacks.zen.zoom()
       end,
-      desc = 'Toggle Zoom',
+      desc = "Toggle Zoom",
     },
 
     {
-      '<leader>.',
+      "<leader>.",
       function()
         Snacks.scratch()
       end,
-      desc = 'Toggle Scratch Buffer',
+      desc = "Toggle Scratch Buffer",
     },
     {
-      '<leader>S',
+      "<leader>S",
       function()
         Snacks.scratch.select()
       end,
-      desc = 'Select Scratch Buffer',
+      desc = "Select Scratch Buffer",
     },
     {
-      '<leader>n',
+      "<leader>n",
       function()
         Snacks.notifier.show_history()
       end,
-      desc = 'Notification History',
+      desc = "Notification History",
     },
     {
-      '<leader>bd',
+      "<leader>bd",
       function()
         Snacks.bufdelete()
       end,
-      desc = 'Delete Buffer',
+      desc = "Delete Buffer",
     },
     {
-      '<leader>cR',
+      "<leader>cR",
       function()
         Snacks.rename.rename_file()
       end,
-      desc = 'Rename File',
+      desc = "Rename File",
     },
     {
-      '<leader>gB',
+      "<leader>gB",
       function()
         Snacks.gitbrowse()
       end,
-      desc = 'Git Browse',
-      mode = { 'n', 'v' },
+      desc = "Git Browse",
+      mode = { "n", "v" },
     },
     {
-      '<leader>gb',
+      "<leader>gb",
       function()
         Snacks.git.blame_line()
       end,
-      desc = 'Git Blame Line',
+      desc = "Git Blame Line",
     },
     {
-      '<leader>gf',
+      "<leader>gf",
       function()
         Snacks.lazygit.log_file()
       end,
-      desc = 'Lazygit Current File History',
+      desc = "Lazygit Current File History",
     },
     {
-      '<leader>gg',
+      "<leader>gg",
       function()
         Snacks.lazygit()
       end,
-      desc = 'Lazygit',
+      desc = "Lazygit",
     },
     {
-      '<leader>gl',
+      "<leader>gl",
       function()
         Snacks.lazygit.log()
       end,
-      desc = 'Lazygit Log (cwd)',
+      desc = "Lazygit Log (cwd)",
     },
     {
-      '<leader>un',
+      "<leader>un",
       function()
         Snacks.notifier.hide()
       end,
-      desc = 'Dismiss All Notifications',
+      desc = "Dismiss All Notifications",
     },
     {
-      '<c-/>',
+      "<c-/>",
       function()
         Snacks.terminal()
       end,
-      desc = 'Toggle Terminal',
+      desc = "Toggle Terminal",
     },
     {
-      '<c-_>',
+      "<c-_>",
       function()
         Snacks.terminal()
       end,
-      desc = 'which_key_ignore',
+      desc = "which_key_ignore",
     },
     {
-      ']]',
+      "]]",
       function()
         Snacks.words.jump(vim.v.count1)
       end,
-      desc = 'Next Reference',
-      mode = { 'n', 't' },
+      desc = "Next Reference",
+      mode = { "n", "t" },
     },
     {
-      '[[',
+      "[[",
       function()
         Snacks.words.jump(-vim.v.count1)
       end,
-      desc = 'Prev Reference',
-      mode = { 'n', 't' },
+      desc = "Prev Reference",
+      mode = { "n", "t" },
     },
   },
 }
