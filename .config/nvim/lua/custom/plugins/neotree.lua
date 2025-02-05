@@ -1,6 +1,7 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
+  event = "VeryLazy",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
@@ -45,7 +46,7 @@ return {
 
     -- Key mapping to toggle NeoTree
     local keymap = vim.keymap
-    keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>", {
+    keymap.set("n", "<leader>ex", "<cmd>Neotree toggle<CR>", {
       desc = "Toggle file explorer",
     })
   end,
