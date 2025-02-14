@@ -1,19 +1,19 @@
 return {
-  'stevearc/conform.nvim',
-  event = { 'BufReadPre', 'BufNewFile' },
+  "stevearc/conform.nvim",
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
-    require('conform').setup {
+    require("conform").setup {
       formatters_by_ft = {
-        javascript = { 'prettier', 'eslint_d' },
-        typescript = { 'prettier', 'eslint_d' },
-        typescriptreact = { 'prettier', 'eslint_d' },
-        javascriptreact = { 'prettier', 'eslint_d' },
-        lua = { 'stylua' },
-        html = { 'prettier' },
-        css = { 'prettier' },
-        json = { 'prettier' },
-        markdown = { 'prettier' },
-        markdown_inline = { 'prettier' },
+        javascript = { "prettier", "eslint" },
+        typescript = { "prettier", "eslint" },
+        typescriptreact = { "prettier", "eslint" },
+        javascriptreact = { "prettier", "eslint" },
+        lua = { "stylua" },
+        html = { "prettier" },
+        css = { "prettier" },
+        json = { "prettier" },
+        markdown = { "prettier" },
+        markdown_inline = { "prettier" },
       },
       format_on_save = {
         lsp_fallback = true,
@@ -22,11 +22,11 @@ return {
       },
       lint = {
         disabled_filetypes = {
-          'NvimTree',
-          'TelescopePrompt',
-          'help',
-          'lspinfo',
-          'startuptime',
+          "NvimTree",
+          "TelescopePrompt",
+          "help",
+          "lspinfo",
+          "startuptime",
         },
       },
     }
