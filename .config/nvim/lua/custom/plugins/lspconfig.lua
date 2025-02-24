@@ -116,6 +116,7 @@ return {
       html = {},
       cssls = {},
       tailwindcss = {},
+      astro = {},
       lua_ls = {
         settings = {
           Lua = {
