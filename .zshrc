@@ -1,3 +1,9 @@
+DISABLE_AUTO_UPDATE="true"
+DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_COMPFIX="true"
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -79,4 +85,3 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-
