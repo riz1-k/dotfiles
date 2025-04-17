@@ -17,8 +17,12 @@ return {
       },
       format_on_save = {
         lsp_fallback = true,
+        lsp_format = "first",
         async = false,
         timeout_ms = 1000,
+        filter = function(client)
+          return client.name == "eslint"
+        end,
       },
       lint = {
         disabled_filetypes = {
